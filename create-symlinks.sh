@@ -1,5 +1,5 @@
 #!/bin/bash
-ln .vimrc ~/.vimrc
-ln .tmux.conf ~/.tmux.conf
+ln -f .vimrc ~/.vimrc
+ln -f .tmux.conf ~/.tmux.conf
 mkdir -p ~/.vim
-ln -s ~/config/autoload ~/.vim/autoload
+ln -f -s ~/config/autoload ~/.vim/autoload
