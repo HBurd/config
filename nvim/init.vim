@@ -1,12 +1,13 @@
 "use system clipboard
 set clipboard=unnamedplus
 
+"mouse support
+set mouse=a
+
 "space tabs, 4 wide
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab smartindent
 
 syntax on
-
-set relativenumber
 
 " enable indentation
 set breakindent
