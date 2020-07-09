@@ -6,4 +6,4 @@ mkdir -p ~/.config/nvim
 ln -f -s ~/config/nvim/init.vim ~/.config/nvim/init.vim
 
 mkdir -p ~/.config/terminator
-ln -f ~/config/terminator_config ~/.config/terminator/conifg
+ln -f -s ~/config/terminator_config ~/.config/terminator/config
