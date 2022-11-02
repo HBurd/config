@@ -120,4 +120,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
+alias vim="nvim"
 export VISUAL=vim
