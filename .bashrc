@@ -121,4 +121,4 @@ if ! shopt -oq posix; then
 fi
 
 alias vim="nvim"
-export VISUAL=vim
+export VISUAL=nvim
