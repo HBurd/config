@@ -20,6 +20,8 @@ set showbreak=>>
 
 set linebreak
 
+set shell=/bin/bash
+
 nnoremap <silent> k gk
 vnoremap <silent> k gk
 inoremap <silent> <Up> <C-o>gk
@@ -30,11 +32,23 @@ inoremap <silent> <Down> <C-o>gj
 
 nnoremap <C-l> :tabnext<CR>
 nnoremap <C-h> :tabprevious<CR>
-nnoremap <F5> :!make<CR>
+nnoremap <F5> :split term://make<CR>
+nnoremap <C-Space> :Files<CR>
 
 call plug#begin('~/.vim/plugged')
 
 Plug 'nanotech/jellybeans.vim'
+
+" Code completion
+Plug 'neovim/nvim-lspconfig'
+
+" Fuzzy search
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+Plug 'sakhnik/nvim-gdb'
+
+Plug 'mhinz/vim-startify'
 
 call plug#end()
 
@@ -42,3 +56,4 @@ call plug#end()
 set t_Co=256
 
 colorscheme jellybeans
+
