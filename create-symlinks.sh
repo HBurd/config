@@ -2,8 +2,7 @@
 mkdir -p ~/.local/share/nvim/site
 ln -f -s ~/config/autoload ~/.local/share/nvim/site/autoload
 
-mkdir -p ~/.config/nvim
-ln -f -s ~/config/nvim/init.vim ~/.config/nvim/init.vim
+ln -s ~/config/nvim ~/.config/nvim
 
 mkdir -p ~/.config/terminator
 ln -f -s ~/config/terminator_config ~/.config/terminator/config
