@@ -1,10 +1,10 @@
-"use system clipboard
+" use system clipboard
 set clipboard=unnamedplus
 
-"mouse support
+" mouse support
 set mouse=a
 
-"space tabs, 4 wide
+" space tabs, 4 wide
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab smartindent
 
 syntax on
@@ -22,10 +22,10 @@ set linebreak
 
 set shell=/bin/bash
 
+" navigate with screen lines (wrapped) instead of file lines
 nnoremap <silent> k gk
 vnoremap <silent> k gk
 inoremap <silent> <Up> <C-o>gk
-
 nnoremap <silent> j gj
 vnoremap <silent> j gj
 inoremap <silent> <Down> <C-o>gj
@@ -33,7 +33,27 @@ inoremap <silent> <Down> <C-o>gj
 nnoremap <C-l> :tabnext<CR>
 nnoremap <C-h> :tabprevious<CR>
 nnoremap <F5> :split term://make<CR>
-nnoremap <C-Space> :Files<CR>
+nnoremap <C-Space> :Buffers<CR>
+
+" Alt to navigate between windows in any mode
+tnoremap <A-h> <C-\><C-N><C-w>h
+tnoremap <A-j> <C-\><C-N><C-w>j
+tnoremap <A-k> <C-\><C-N><C-w>k
+tnoremap <A-l> <C-\><C-N><C-w>l
+inoremap <A-h> <C-\><C-N><C-w>h
+inoremap <A-j> <C-\><C-N><C-w>j
+inoremap <A-k> <C-\><C-N><C-w>k
+inoremap <A-l> <C-\><C-N><C-w>l
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
+
+" Escape to exit terminal mode
+tnoremap <Esc> <C-\><C-n>
+
+" C-R (paste register) in terminal mode
+tnoremap <expr> <C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
 
 call plug#begin('~/.vim/plugged')
 
